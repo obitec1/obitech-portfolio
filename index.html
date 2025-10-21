@@ -1,1 +1,251 @@
-obitec-portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #f8f8f8;
+        }
+        .primary-red {
+            color: #E53E3E; /* A strong, modern red */
+        }
+        .bg-primary-red {
+            background-color: #E53E3E;
+        }
+        .border-primary-red {
+            border-color: #E53E3E;
+        }
+        .skill-card, .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover, .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold primary-red">MyPortfolio</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:primary-red transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:primary-red transition duration-300">Skills</a>
+                <a href="#services" class="text-gray-600 hover:primary-red transition duration-300">Services</a>
+                <a href="#projects" class="text-gray-600 hover:primary-red transition duration-300">Projects</a>
+                <a href="#contact" class="bg-primary-red text-white px-5 py-2 rounded-full hover:bg-red-700 transition duration-300">Contact Me</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-feather="menu" class="primary-red"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:primary-red">About</a>
+            <a href="#skills" class="block py-2 text-gray-600 hover:primary-red">Skills</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:primary-red">Services</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:primary-red">Projects</a>
+            <a href="#contact" class="block mt-2 bg-primary-red text-white text-center px-5 py-2 rounded-full hover:bg-red-700">Contact Me</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <img src="https://placehold.co/150x150/E53E3E/FFFFFF?text=JD" alt="Your Name" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-white shadow-lg">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-3">Hello, I'm Jane Doe</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">A Passionate <span class="primary-red font-semibold">Web Developer</span> & <span class="primary-red font-semibold">UI/UX Designer</span></p>
+                <a href="#projects" class="bg-primary-red text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-red-700 transition duration-300">View My Work</a>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">About <span class="primary-red">Me</span></h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/f8f8f8/333333?text=A+Professional+Image" alt="About me" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">Crafting Digital Experiences</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Hi! I'm Jane, a dedicated and creative professional with a strong focus on building beautiful, functional, and user-centric websites and applications. With over 5 years of experience in the field, I thrive on turning complex problems into elegant, simple, and intuitive designs.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            My journey in tech began with a fascination for how things work, which led me to the world of web development. I am constantly learning and adapting to new technologies to deliver the best possible results for my clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">My <span class="primary-red">Skills</span></h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i data-feather="figma" class="h-12 w-12 mx-auto mb-3 primary-red"></i>
+                        <h3 class="font-semibold">Figma</h3>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i data-feather="code" class="h-12 w-12 mx-auto mb-3 primary-red"></i>
+                        <h3 class="font-semibold">HTML & CSS</h3>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i data-feather="database" class="h-12 w-12 mx-auto mb-3 primary-red"></i>
+                        <h3 class="font-semibold">JavaScript</h3>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i data-feather="pen-tool" class="h-12 w-12 mx-auto mb-3 primary-red"></i>
+                        <h3 class="font-semibold">React</h3>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i data-feather="wind" class="h-12 w-12 mx-auto mb-3 primary-red"></i>
+                        <h3 class="font-semibold">Tailwind CSS</h3>
+                    </div>
+                    <div class="skill-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i data-feather="git-branch" class="h-12 w-12 mx-auto mb-3 primary-red"></i>
+                        <h3 class="font-semibold">Git & GitHub</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">What I <span class="primary-red">Offer</span></h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-primary-red">
+                        <i data-feather="layout" class="h-12 w-12 mx-auto mb-4 primary-red"></i>
+                        <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                        <p class="text-gray-600">Creating intuitive and visually stunning user interfaces that enhance user experience.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-primary-red">
+                        <i data-feather="monitor" class="h-12 w-12 mx-auto mb-4 primary-red"></i>
+                        <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                        <p class="text-gray-600">Building responsive, high-performance websites from the ground up using modern technologies.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-primary-red">
+                        <i data-feather="smartphone" class="h-12 w-12 mx-auto mb-4 primary-red"></i>
+                        <h3 class="text-xl font-bold mb-3">Responsive Design</h3>
+                        <p class="text-gray-600">Ensuring your website looks and functions perfectly on all devices, from desktops to mobile phones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">My <span class="primary-red">Projects</span></h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/E53E3E/FFFFFF?text=Project+1" alt="Project 1" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">A complete e-commerce solution with a modern UI and robust backend.</p>
+                            <a href="#" class="font-semibold primary-red hover:text-red-700">View Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/E53E3E/FFFFFF?text=Project+2" alt="Project 2" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Corporate Website</h3>
+                            <p class="text-gray-600 mb-4">A professional and sleek website for a leading tech company.</p>
+                            <a href="#" class="font-semibold primary-red hover:text-red-700">View Details &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/E53E3E/FFFFFF?text=Project+3" alt="Project 3" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Portfolio Template</h3>
+                            <p class="text-gray-600 mb-4">A creative and customizable portfolio template for designers.</p>
+                            <a href="#" class="font-semibold primary-red hover:text-red-700">View Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl font-bold text-center mb-12">Get In <span class="primary-red">Touch</span></h2>
+                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border-t-4 border-primary-red">
+                     <form>
+                         <div class="mb-5">
+                             <label for="name" class="block mb-2 font-medium text-gray-700">Full Name</label>
+                             <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300" placeholder="Your Name">
+                         </div>
+                         <div class="mb-5">
+                             <label for="email" class="block mb-2 font-medium text-gray-700">Email Address</label>
+                             <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300" placeholder="your.email@example.com">
+                         </div>
+                         <div class="mb-5">
+                             <label for="message" class="block mb-2 font-medium text-gray-700">Message</label>
+                             <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300" placeholder="How can I help you?"></textarea>
+                         </div>
+                         <button type="submit" class="w-full bg-primary-red text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
+                             Send Message
+                         </button>
+                     </form>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-red-400 transition duration-300"><i data-feather="github"></i></a>
+                <a href="#" class="hover:text-red-400 transition duration-300"><i data-feather="linkedin"></i></a>
+                <a href="#" class="hover:text-red-400 transition duration-300"><i data-feather="twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Jane Doe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Feather Icons
+        feather.replace();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
